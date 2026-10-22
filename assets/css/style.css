@@ -627,6 +627,114 @@ header {
     margin-bottom: 35px
 }
 
+.gallery-section {
+    background: #e9e6df
+}
+
+.gallery-facebook {
+    max-width: 390px;
+    padding-left: 24px;
+    border-left: 2px solid var(--orange)
+}
+
+.gallery-facebook p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7
+}
+
+.gallery-facebook .social-link {
+    margin-top: 12px
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px
+}
+
+.gallery-slot {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--ink)
+}
+
+.gallery-open {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in
+}
+
+.gallery-open:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: -3px
+}
+
+.gallery-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    transition: transform .3s ease
+}
+
+.gallery-slot:hover .gallery-photo {
+    transform: scale(1.04)
+}
+
+.photo-lightbox {
+    position: relative;
+    width: min(96vw, 1200px);
+    max-width: 96vw;
+    max-height: 94vh;
+    padding: 54px 16px 16px;
+    overflow: auto;
+    border: 1px solid rgba(255, 255, 255, .2);
+    background: var(--ink);
+    color: #fff
+}
+
+.photo-lightbox::backdrop {
+    background: rgba(5, 12, 17, .88)
+}
+
+.photo-lightbox-image {
+    display: block;
+    width: 100%;
+    max-height: calc(94vh - 100px);
+    object-fit: contain
+}
+
+.photo-lightbox-caption {
+    margin: 12px 0 0;
+    color: #d7dddf;
+    font-size: 12px;
+    text-align: center
+}
+
+.photo-lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: transparent;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer
+}
+
+.photo-lightbox-close:hover {
+    background: var(--orange);
+    border-color: var(--orange)
+}
+
 /* Coordonnées, liens de contact et bouton WhatsApp. */
 .contact {
     background: var(--ink);
@@ -762,7 +870,11 @@ footer {
     }
 
     .project-grid {
-        grid-template-rows: auto
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
     }
 
     .contact-grid {
@@ -770,7 +882,7 @@ footer {
     }
 }
 
-/* Téléphones : menu repliable, sections resserrées et galerie vidéo sur une colonne. */
+/* Téléphones : menu repliable, sections resserrées et galeries adaptées à l’écran. */
 @media(max-width:650px) {
     .wrap {
         width: calc(100% - 36px)
@@ -927,6 +1039,16 @@ footer {
 
     .section-head .section-copy {
         margin-top: 10px
+    }
+
+    .gallery-facebook {
+        margin-top: 20px;
+        padding-left: 16px
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px
     }
 
     .service-grid {

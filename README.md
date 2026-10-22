@@ -7,7 +7,7 @@ Site vitrine multipage de FTS Aluminium, entreprise basée à Riviera Faya, Abid
 - `index.html` : accueil et présentation synthétique de l’entreprise.
 - `services.html` : prestations proposées.
 - `entreprise.html` : présentation de FTS Aluminium.
-- `realisations.html` : accès aux vidéos de réalisations publiées sur Facebook.
+- `realisations.html` : vidéos, galerie des 12 photos de réalisations et lien vers les photos Facebook.
 - `contact.html` : coordonnées et liens de contact.
 
 ## Organisation des fichiers
@@ -26,6 +26,7 @@ Site vitrine multipage de FTS Aluminium, entreprise basée à Riviera Faya, Abid
 │       └── main.js
 └── images/
     ├── logo.png
+    ├── photo1.jpeg … photo12.jpeg
     ├── photo_Accueil.jpeg
     └── photo_Entreprise.jpeg
 ```
@@ -37,7 +38,7 @@ Le site est statique : il n’a pas besoin d’installation ni de serveur applic
 1. Ouvrir le dossier du projet dans Visual Studio Code.
 2. Ouvrir `index.html` directement dans un navigateur, ou utiliser une extension de serveur local comme Live Server.
 
-Une connexion Internet est nécessaire pour charger les polices Google Fonts et ouvrir les vidéos Facebook.
+Une connexion Internet est nécessaire pour charger les polices Google Fonts et ouvrir les vidéos et photos Facebook.
 
 ## Technologies
 
@@ -54,7 +55,7 @@ Une connexion Internet est nécessaire pour charger les polices Google Fonts et 
 - E-mail : contactfrikiri@gmail.com.
 - Facebook : [FTS Aluminium](https://www.facebook.com/FTSaluminium/).
 
-Les vidéos de la page Réalisations s’ouvrent sur Facebook à partir des liens fournis par l’entreprise.
+Les vidéos de la page Réalisations s’ouvrent sur Facebook à partir des liens fournis par l’entreprise. La galerie affiche les fichiers `photo1.jpeg` à `photo12.jpeg` ; un clic sur une photo l’ouvre en grand sans recadrage. Le lien associé ouvre l’onglet Photos de la page Facebook de FTS.
 
 ## Modifications courantes
 
@@ -63,3 +64,4 @@ Les vidéos de la page Réalisations s’ouvrent sur Facebook à partir des lien
 - Modifier les styles communs dans `assets/css/style.css`.
 - Modifier les interactions du menu et l’année dans `assets/js/main.js`.
 - Pour remplacer une vidéo de Réalisations, modifier l’URL Facebook de la vignette correspondante dans `realisations.html`.
+- Pour remplacer une photo de la galerie, mettre à jour son fichier dans `images/` et conserver le chemin correspondant dans `realisations.html`.
